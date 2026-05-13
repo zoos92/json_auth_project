@@ -111,6 +111,11 @@ USE_I18N = True
 
 USE_TZ = True
 
+REST_FRAMEWORK = {
+    'EXCEPTION_HANDLER': 'exceptions.core_exception_handler',
+    'NON_FIELD_ERRORS_KEY': 'error',
+}
+
 AUTH_USER_MODEL = 'authentication.User'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
